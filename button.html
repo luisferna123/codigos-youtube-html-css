@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="button1.css">
+</head>
+<body>
+    <div class="box" id="box1" onmouseover="enableHoverEffect();" onmouseleave="disableMouseHoverEffect()">
+        <a href="javascript:void();">
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            Neon Button 1
+        </a>
+    </div>
+    <div class="box" id="box2" onmouseover="enableHoverEffect2();" onmouseleave="disableMouseHoverEffect2()">
+        <a href="javascript:void();">
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            Neon Button 2
+        </a>
+    </div>
+    <script>
+        var btn1 = document.getElementById("box1");
+        var btn2 = document.getElementById("box2");
+        function enableHoverEffect(){
+            setTimeout(function(){
+                btn1.classList.add('btn1');
+            }, 1000);
+        }
+
+        function disableMouseHoverEffect(){
+            setTimeout(function(){
+                btn1.classList.remove('btn1');
+            }, 300);
+        }
+
+        function enableHoverEffect2(){
+            setTimeout(function(){
+                btn2.classList.add('btn2');
+            }, 1000);
+        }
+
+        function disableMouseHoverEffect2(){
+            setTimeout(function(){
+                btn2.classList.remove('btn2');
+            }, 300);
+        }
+    </script>
+</body>
+</html>

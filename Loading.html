@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #001d10;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .loading {
+            position: relative;
+            height: 250px;
+            width: 250px;
+            transform: scale(1);
+            left: 45px;
+
+        }
+
+        .loading .blocks {
+            position: absolute;
+            height: 19px;
+            width: 10px;
+            background: #2a2a2b;
+            left: 50%;
+            transform: rotate(calc(18deg * var(--i)));
+            transform-origin: 0 135px;
+            animation: animate 8.5s ease-in-out infinite;
+            border-radius: 5px;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        @keyframes animate {
+
+            0%,
+            50% {
+                background-color: #1a4130;
+                box-shadow: none;
+            }
+
+            50.2%,
+            100% {
+                background-color: #0f0;
+                box-shadow: 0 0 5px #0f0,
+                    0 0 15px #0f0,
+                    0 0 30px #0f0,
+                    0 0 60px #0f0,
+                    0 0 90px #0f0;
+            }
+        }
+
+        h3 {
+            position: relative;
+            right: 143.6px;
+            font-size: 1.6em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            animation: elsh 0.9s infinite linear;
+            color: #0f0;
+        }
+
+        @keyframes elsh {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .elemento-a-animar {
+            animation: elsh 2s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="loading">
+            <div class="blocks" style="--i:1;"></div>
+            <div class="blocks" style="--i:2;"></div>
+            <div class="blocks" style="--i:3;"></div>
+            <div class="blocks" style="--i:4;"></div>
+            <div class="blocks" style="--i:5;"></div>
+            <div class="blocks" style="--i:6;"></div>
+            <div class="blocks" style="--i:7;"></div>
+            <div class="blocks" style="--i:8;"></div>
+            <div class="blocks" style="--i:9;"></div>
+            <div class="blocks" style="--i:10;"></div>
+            <div class="blocks" style="--i:11;"></div>
+            <div class="blocks" style="--i:12;"></div>
+            <div class="blocks" style="--i:13;"></div>
+            <div class="blocks" style="--i:14;"></div>
+            <div class="blocks" style="--i:15;"></div>
+            <div class="blocks" style="--i:16;"></div>
+            <div class="blocks" style="--i:17;"></div>
+            <div class="blocks" style="--i:18;"></div>
+            <div class="blocks" style="--i:19;"></div>
+            <div class="blocks" style="--i:20;"></div>
+        </div>
+        <h3>Fernando</h3>
+    </section>
+
+</body>
+
+</html>
